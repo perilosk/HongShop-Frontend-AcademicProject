@@ -3,6 +3,8 @@
     <h1 v-if="searchTerm" class="mb-4">ผลการค้นหาสำหรับ: "{{ searchTerm }}"</h1>
     <h1 v-else class="mb-4">สินค้าทั้งหมด</h1>
 
+    <!-- Sort -->
+
     <div class="row mb-4 p-3 bg-light border rounded-3">
       <div class="col-md-6 mb-2 mb-md-0">
         <label for="filterType" class="form-label fw-bold">กรองตามประเภทสินค้า:</label>
