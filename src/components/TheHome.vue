@@ -43,7 +43,11 @@
             :key="index"
             :class="['carousel-item', { active: index === 0 }]"
           >
-            <img :src="image" class="d-block w-100" :alt="'Promotion ' + (index + 1)" />
+            <img
+              :src="image"
+              class="d-block w-100 h-20 object-fit-cover"
+              :alt="'Promotion ' + (index + 1)"
+            />
           </div>
         </div>
 
@@ -94,14 +98,9 @@
 import ProductCard from '../components/PageProduct.vue'
 import { ref, onMounted } from 'vue'
 import apiClient from '../services/api'
+import imagedogbanner from '/dogbanner1.png'
 
-const promoImageSrc = 'https://picsum.photos/1400/500?random='
-const carouselImages = ref([
-  promoImageSrc + 1,
-  promoImageSrc + 2,
-  promoImageSrc + 3,
-  promoImageSrc + 4,
-])
+const carouselImages = ref([imagedogbanner, imagedogbanner, imagedogbanner, imagedogbanner])
 
 const featuredProducts = ref([])
 const loadingFeatured = ref(true)
